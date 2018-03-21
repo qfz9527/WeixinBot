@@ -12,7 +12,7 @@ RUN apt-get update && \
 ADD weixin_bot.tar.gz /
 WORKDIR /weixin_bot
 
-RUN cd / && ls -All && pip install -r requirements.txt
+RUN cd /weixin_bot && ls -All && pip install -r requirements.txt
 EXPOSE 80
 ENTRYPOINT ["./weixin_bot.py"]
 CMD [""]
