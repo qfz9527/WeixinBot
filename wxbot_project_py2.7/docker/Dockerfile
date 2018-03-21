@@ -9,10 +9,10 @@ RUN apt-get update && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+ADD weixin_bot.tar.gz /
 WORKDIR /weixin_bot
-RUN tar -xzvf weixin_bot.tar.gz -C /weixin_bot
 
-RUN pip install -r /weixin_bot/wxbot_project_py2.7/config/requirements.txt
+RUN pip install -r ./config/requirements.txt
 EXPOSE 80
 ENTRYPOINT ["./weixin_bot.py"]
 CMD [""]
