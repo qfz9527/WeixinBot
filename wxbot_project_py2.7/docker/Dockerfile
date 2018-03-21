@@ -7,8 +7,7 @@ RUN apt-get update && \
                       python-pip && \
     apt-get clean && \
     apt-get autoclean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    tar -czf weixin_bot.tar.gz ../../wxbot_project_py2.7/
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD weixin_bot.tar.gz /
 WORKDIR /weixin_bot
