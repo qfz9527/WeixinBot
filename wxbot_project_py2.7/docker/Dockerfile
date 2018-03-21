@@ -10,6 +10,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD weixin_bot.tar.gz /
+RUN ls -all /
 WORKDIR /weixin_bot
 
 RUN pip install -r config/requirements.txt
