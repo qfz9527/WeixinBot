@@ -10,7 +10,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD weixin_bot.tar.gz /
-WORKDIR /weixin_bot
+WORKDIR /wxbot_project_py2.7
 
 RUN cd /wxbot_project_py2.7 && pip install -r config/requirements.txt
 EXPOSE 80
